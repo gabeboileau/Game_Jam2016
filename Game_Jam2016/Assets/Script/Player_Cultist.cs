@@ -105,7 +105,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 				currentImpInHand.gameObject.AddComponent<Rigidbody2D>();
 			}
 
-			currentImpInHand.transform.parent= null;
+			currentImpInHand.transform.parent = null;
 			currentImpInHand.gameObject.GetComponent<Rigidbody2D>().AddForce(m_MoveDirection * 100);
 			//GameObject.Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
 
