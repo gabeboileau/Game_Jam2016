@@ -13,6 +13,7 @@ public class Imp_SpawnController : MonoBehaviour
 	void Start()
 	{
 		StartCoroutine(cr_SpawnImp());
+			
 	}
 
 
