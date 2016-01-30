@@ -7,8 +7,6 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 	public int playerMovementSpeed;
 	public Transform m_ImpSpot;
 
-
-
 	private const int MAX_HEALTH = 100;
 	private int m_CurrentHealth;
 
@@ -18,11 +16,12 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 	private bool m_HasImp = false;
 	private Imp currentImpInHand;
 
-	private Vector3 m_MoveDirectiom;
+	private Vector3 m_MoveDirection;
+
 
 	void Awake()
 	{
-		m_MoveDirectiom = Vector3.zero;
+		m_MoveDirection = Vector3.zero;
 		m_CurrentHealth = MAX_HEALTH;
 	}
 
@@ -37,24 +36,23 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 	{
 		UpdateInput();
 
-		m_MoveDirectiom = new Vector3(m_HorizontalInput, m_VerticalInput, 0);
-		transform.position += m_MoveDirectiom * playerMovementSpeed * Time.deltaTime;
-
-		if (m_MoveDirectiom.x > 0.2)
-		{
-			GetComponent<SpriteRenderer>().flipX = true;
-		}
-
-		else
-		{
-			GetComponent<SpriteRenderer>().flipX = false;
-		}
+		m_MoveDirection = new Vector3(m_HorizontalInput, m_VerticalInput, 0);
+		transform.position += m_MoveDirection * playerMovementSpeed * Time.deltaTime;
 	}
 
 	void UpdateInput()
 	{
-		m_VerticalInput = Input.GetAxis("Vertical");
-		m_HorizontalInput = Input.GetAxis("Horizontal");
+		if (Game_Controller.controller1IsDemon)
+		{
+			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
+			m_HorizontalInput = Input.GetAxis("Joystick2Horizontal");
+		}
+		else
+		{
+			m_VerticalInput = Input.GetAxis("Joystick1Vertical");
+			m_HorizontalInput = Input.GetAxis("Joystick1Horizontal");
+		}
+		
 	}
 
 
@@ -71,6 +69,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 			}
 		}
 	}
+
 
 	void OnTriggerEnter2D(Collider2D aCollider2D)
 	{

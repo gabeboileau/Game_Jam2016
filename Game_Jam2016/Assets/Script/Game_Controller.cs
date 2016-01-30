@@ -7,11 +7,15 @@ public class Game_Controller : MonoBehaviour
 	public int speedOfDemonDepletion;
 	public GameObject m_DemonBar;
 
-	private static int currentDemonSliderAmount;
+	public static bool controller1IsDemon;
+
+
+	//private static int currentDemonSliderAmount;
 	private static Slider m_DemonSlider;
 
 	void Start()
 	{
+		controller1IsDemon = false;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
 	}
 
