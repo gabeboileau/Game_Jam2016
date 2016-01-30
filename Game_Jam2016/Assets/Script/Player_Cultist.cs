@@ -5,7 +5,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 {
 	public int immunityTime;
 	public int playerMovementSpeed;
-	public Transform m_ImpSpot;
+	public Transform m_RightImpSpot;
 
 	private const int MAX_HEALTH = 100;
 	private int m_CurrentHealth;
@@ -46,13 +46,23 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 		{
 			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick2Horizontal");
+
+			if (Input.GetButtonDown("Joystick2FireImp"))
+			{
+				//FireImp();
+			}
+
 		}
 		else
 		{
 			m_VerticalInput = Input.GetAxis("Joystick1Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick1Horizontal");
+
+			if (Input.GetButtonDown("Joystick1FireImp"))
+			{
+				//FireImp();
+			}
 		}
-		
 	}
 
 
@@ -63,7 +73,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 			if (aCollision.gameObject.GetComponent<Imp>() != null)
 			{
 				currentImpInHand = aCollision.gameObject.GetComponent<Imp>();
-				aCollision.transform.position = m_ImpSpot.position;
+				aCollision.transform.position = m_RightImpSpot.position;
 				aCollision.transform.parent = transform;
 				m_HasImp = true;
 			}
@@ -79,14 +89,30 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 			{
 				//Collided with the fire
 				Game_Controller.AddToDemonBar(10);
-				GameObject.Destroy(currentImpInHand.gameObject);
+				Destroy(currentImpInHand.gameObject);
 				currentImpInHand = null;
 				m_HasImp = false;
 			}
 		}
 	}
 
+	void FireImp()
+	{
+		if (currentImpInHand != null)
+		{
+			if (currentImpInHand.gameObject.GetComponent<Rigidbody2D>() == null)
+			{
+				currentImpInHand.gameObject.AddComponent<Rigidbody2D>();
+			}
 
+			currentImpInHand.transform.parent = null;
+			currentImpInHand.gameObject.GetComponent<Rigidbody2D>().AddForce(m_MoveDirection * 100);
+			//GameObject.Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
+
+			currentImpInHand = null;
+			m_HasImp = false;
+		}
+	}
 
 
 }

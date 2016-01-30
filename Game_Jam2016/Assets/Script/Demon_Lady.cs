@@ -12,6 +12,8 @@ public class Demon_Lady : MonoBehaviour
 
 	private Vector3 m_MoveDirection;
 
+
+
 	void Start()
 	{
 		m_Animator = GetComponent<Animator>();
@@ -19,7 +21,6 @@ public class Demon_Lady : MonoBehaviour
 
 	void Update()
 	{
-		Debug.Log(m_MoveDirection.magnitude);
 		UpdateInput();
 
 		m_MoveDirection = new Vector3(m_HorizontalInput, m_VerticalInput, 0);
@@ -35,6 +36,7 @@ public class Demon_Lady : MonoBehaviour
 		}
 	}
 
+
 	void UpdateInput()
 	{
 		m_Animator.SetFloat("Horizontal", m_HorizontalInput);
@@ -49,8 +51,7 @@ public class Demon_Lady : MonoBehaviour
 		{
 			m_VerticalInput = Input.GetAxis("Joystick1Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick1Horizontal");
+
 		}
-
 	}
-
 }

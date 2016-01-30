@@ -17,6 +17,9 @@ public class Game_Controller : MonoBehaviour
 	{
 		controller1IsDemon = false;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
+
+		//StartCoroutine(cr_SwitchControllerSupport());
+
 	}
 
 
@@ -29,4 +32,18 @@ public class Game_Controller : MonoBehaviour
 	{
 		m_DemonSlider.value -= Time.deltaTime* speedOfDemonDepletion;
 	}
+
+	IEnumerator cr_SwitchControllerSupport()
+	{
+		while (true)
+		{
+			Debug.Log("Change");
+			controller1IsDemon = !controller1IsDemon;	
+			yield return new WaitForSeconds(5.0f);
+
+		}
+
+	}
+
+
 }
