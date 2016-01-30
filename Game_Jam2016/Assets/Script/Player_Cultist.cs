@@ -49,7 +49,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 			if (Input.GetButtonDown("Joystick2FireImp"))
 			{
-				//FireImp();
+				FireImp();
 			}
 
 		}
@@ -60,7 +60,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 			if (Input.GetButtonDown("Joystick1FireImp"))
 			{
-				//FireImp();
+				FireImp();
 			}
 		}
 	}
@@ -105,11 +105,11 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 				currentImpInHand.gameObject.AddComponent<Rigidbody2D>();
 			}
 
-			currentImpInHand.transform.parent = null;
+			currentImpInHand.transform.parent= null;
 			currentImpInHand.gameObject.GetComponent<Rigidbody2D>().AddForce(m_MoveDirection * 100);
 			//GameObject.Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
 
-			currentImpInHand = null;
+			//currentImpInHand = null;
 			m_HasImp = false;
 		}
 	}
