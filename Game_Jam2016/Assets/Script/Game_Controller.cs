@@ -17,7 +17,7 @@ public class Game_Controller : MonoBehaviour
 
 	void Start()
 	{
-		controller1IsDemon = true;
+		controller1IsDemon = false;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
 		currentTime = startTime;
 		//StartCoroutine(cr_SwitchControllerSupport());
@@ -49,6 +49,10 @@ public class Game_Controller : MonoBehaviour
 		{
 			currentTime -= Time.deltaTime;
 
+		}
+		else
+		{
+			//Game Over
 		}
 
 	}
