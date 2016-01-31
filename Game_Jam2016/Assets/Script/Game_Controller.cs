@@ -10,12 +10,14 @@ public class Game_Controller : MonoBehaviour
 	public static bool controller1IsDemon;
 	public Text timerText;
 	private float currentTime;
+	private static GameObject m_GameOverImage;
 
 	//private static int currentDemonSliderAmount;
 	private static Slider m_DemonSlider;
 
 	void Start()
 	{
+		m_GameOverImage = transform.Find("GameOver").gameObject;
 		controller1IsDemon = false;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
 		currentTime = 0;
@@ -40,6 +42,7 @@ public class Game_Controller : MonoBehaviour
 		if (m_DemonSlider.value <= 0)
 		{
 			//Game Over
+			GameOver();
 			Debug.Log("Game Over");
 		}
 		else
@@ -61,6 +64,12 @@ public class Game_Controller : MonoBehaviour
 
 		}
 
+	}
+
+	public static void GameOver()
+	{
+		Time.timeScale = 0;
+		m_GameOverImage.SetActive(true);
 	}
 
 

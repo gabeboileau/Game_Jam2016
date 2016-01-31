@@ -17,14 +17,11 @@ public class Enemy_Spawner : MonoBehaviour
 	{
 		while (true)
 		{
-			yield return new WaitForSeconds(timeBetweenSpawns);
+			yield return new WaitForSeconds(UnityEngine.Random.Range(3,9));
 			Spawn();
 		}
 		
 	}
-
-
-
 
 	public void Spawn()
 	{

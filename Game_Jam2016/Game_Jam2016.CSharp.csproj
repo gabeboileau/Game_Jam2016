@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AudioCompo.cs" />
     <Compile Include="Assets\Script\Demon_AttackCollider.cs" />
     <Compile Include="Assets\Script\Demon_Lady.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />

@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-
-
 public class Imp_SpawnController : MonoBehaviour
 {
 	public GameObject imp;
@@ -13,7 +11,6 @@ public class Imp_SpawnController : MonoBehaviour
 	void Start()
 	{
 		StartCoroutine(cr_SpawnImp());
-			
 	}
 
 

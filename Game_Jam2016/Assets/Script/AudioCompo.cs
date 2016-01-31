@@ -16,7 +16,8 @@ public class AudioCompo : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
        Audio= GameObject.Find("SoundPlayer").GetComponent<AudioSource>();
        AudioLoop = GameObject.Find("LoopPlayer").GetComponent<AudioSource>();
 
@@ -27,10 +28,6 @@ public class AudioCompo : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public void Attack1Sound()
     {

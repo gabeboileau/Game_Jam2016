@@ -38,6 +38,7 @@ public class Player_Cultist : MonoBehaviour, IPlayer
 	{
 		if (m_CurrentHealth <= 0)
 		{
+			Game_Controller.GameOver();
 			Time.timeScale = 0;
 		}
 
@@ -70,7 +71,7 @@ public class Player_Cultist : MonoBehaviour, IPlayer
 
 			if (Input.GetButtonDown("Joystick2FireImp"))
 			{
-				//FireImp();
+				FireImp();
 			}
 		}
 		else
@@ -80,7 +81,7 @@ public class Player_Cultist : MonoBehaviour, IPlayer
 
 			if (Input.GetButtonDown("Joystick1FireImp"))
 			{
-				//FireImp();
+				FireImp();
 			}
 		}
 	}
@@ -121,14 +122,8 @@ public class Player_Cultist : MonoBehaviour, IPlayer
 	{
 		if (currentImpInHand != null)
 		{
-			if (currentImpInHand.gameObject.GetComponent<Rigidbody2D>() == null)
-			{
-				currentImpInHand.gameObject.AddComponent<Rigidbody2D>();
-			}
-
+			
 			currentImpInHand.transform.SetParent(null);
-			currentImpInHand.gameObject.GetComponent<Rigidbody2D>().AddForce(m_MoveDirection * 100);
-			//Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
 			currentImpInHand.GetComponent<Imp>().enabled = true;
 			currentImpInHand = null;
 			m_HasImp = false;

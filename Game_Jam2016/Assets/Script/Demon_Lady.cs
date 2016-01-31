@@ -94,33 +94,27 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 		}
 	}
 
-
 	void Attack()
 	{
-		if (m_MoveDirection.x > 0.5)
+		if (m_MoveDirection.x > 0.2)
 		{
-			Debug.Log("Right");
 			m_Animator.SetTrigger("RightAttack");
 			rightCollider.SetActive(true);
 		}
 
-		else if (m_MoveDirection.x < -0.5)
+		else if (m_MoveDirection.x < -0.2)
 		{
-			Debug.Log("Left");
 			m_Animator.SetTrigger("LeftAttack");
 			leftCollider.SetActive(true);
 		}
 
-		else if (m_MoveDirection.y > 0.5)
+		else if (m_MoveDirection.y > 0.2)
 		{
-			Debug.Log("Up");
 			m_Animator.SetTrigger("UpAttack");
 			topCollider.SetActive(true);
 		}
-
-		else if (m_MoveDirection.y < -0.5)
+		else if (m_MoveDirection.y < -0.2)
 		{
-			Debug.Log("Down");
 			bottomCollider.SetActive(true);
 			m_Animator.SetTrigger("DownAttack");
 		}
