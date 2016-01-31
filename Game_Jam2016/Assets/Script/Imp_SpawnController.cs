@@ -31,8 +31,6 @@ public class Imp_SpawnController : MonoBehaviour
 	{
 		int randomIndex = UnityEngine.Random.Range(0, listOfImpSpawners.Count);
 		Instantiate(imp, listOfImpSpawners[randomIndex].transform.position, Quaternion.identity);
-
-
-
+		imp.GetComponent<Imp>().listOfPatrolPoints = listOfImpSpawners;
 	}
 }

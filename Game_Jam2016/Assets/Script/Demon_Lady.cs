@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Demon_Lady : MonoBehaviour
+public class Demon_Lady : MonoBehaviour, IPlayer
 {
 	public int playerMovementSpeed;
 
@@ -46,12 +46,49 @@ public class Demon_Lady : MonoBehaviour
 		{
 			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick2Horizontal");
+
+			if (Input.GetButton("Joystick2FireImp"))
+			{
+				Attack();
+			}
 		}
 		else
 		{
 			m_VerticalInput = Input.GetAxis("Joystick1Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick1Horizontal");
 
+			if (Input.GetButton("Joystick1FireImp"))
+			{
+				Attack();
+			}
 		}
+	}
+
+	void Attack()
+	{
+		if (m_MoveDirection.x > 0.5)
+		{
+			m_Animator.SetTrigger("RightAttack");
+		}
+
+		else if (m_MoveDirection.x < -0.5)
+		{
+			m_Animator.SetTrigger("LeftAttack");
+		}
+
+		else if (m_MoveDirection.y > 0.5)
+		{
+			m_Animator.SetTrigger("UpAttack");
+		}
+
+		else if (m_MoveDirection.y < -0.5)
+		{
+			m_Animator.SetTrigger("DownAttack");
+		}
+	}
+
+	public void TakeDamage(int aAmount)
+	{
+		Game_Controller.RemoveFromDemonBar(10);
 	}
 }

@@ -1,0 +1,662 @@
+fileFormatVersion: 2
+guid: 8c20fd7d51ab5ab428a8fad110eedc61
+timeCreated: 1454261098
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Witch_0
+    21300002: Witch_1
+    21300004: Witch_2
+    21300006: Witch_3
+    21300008: Witch_4
+    21300010: Witch_5
+    21300012: Witch_6
+    21300014: Witch_7
+    21300016: Witch_8
+    21300018: Witch_9
+    21300020: Witch_10
+    21300022: Witch_13
+    21300024: Witch_14
+    21300026: Witch_15
+    21300028: Witch_16
+    21300030: Witch_17
+    21300032: Witch_18
+    21300034: Witch_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Witch_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 32
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 63}
+        - {x: -64, y: 39}
+        - {x: -56, y: 20}
+        - {x: -38, y: 16}
+        - {x: -29, y: 16}
+        - {x: -20, y: 18}
+        - {x: -50, y: 8}
+        - {x: -53, y: 2}
+        - {x: -64, y: -41}
+        - {x: -64, y: -50}
+        - {x: -57, y: -50}
+        - {x: -44, y: -63}
+        - {x: 64, y: -63}
+        - {x: 64, y: 63}
+    - name: Witch_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 24
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 67}
+        - {x: -64, y: 64}
+        - {x: -64, y: 40}
+        - {x: -36, y: 14}
+        - {x: -29, y: 15}
+        - {x: -17, y: 19}
+        - {x: -50, y: 8}
+        - {x: -53, y: 0}
+        - {x: -64, y: -43}
+        - {x: -64, y: -59}
+        - {x: -39, y: -54}
+        - {x: -22, y: -67}
+        - {x: 36, y: -67}
+        - {x: 64, y: -54}
+        - {x: 64, y: 67}
+    - name: Witch_2
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 24
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 67}
+        - {x: -64, y: -67}
+        - {x: 43, y: -67}
+        - {x: 62, y: -58}
+        - {x: 64, y: -40}
+        - {x: 64, y: 67}
+    - name: Witch_3
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 32
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64, y: 63}
+        - {x: -64, y: -61}
+        - {x: -62, y: -63}
+        - {x: 64, y: -63}
+        - {x: 64, y: 63}
+    - name: Witch_4
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 32
+        width: 128
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 64, y: 59.5}
+        - {x: 63, y: 60.5}
+        - {x: 39, y: 69.5}
+        - {x: -64, y: 69.5}
+        - {x: -64, y: -69.5}
+        - {x: 64, y: -69.5}
+        - {x: 64, y: -25.5}
+        - {x: 51, y: 2.5}
+        - {x: 31, y: 3.5}
+        - {x: 64, y: 18.5}
+    - name: Witch_5
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 32
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 63, y: 31.5}
+        - {x: 63, y: 58.5}
+        - {x: 57, y: 69.5}
+        - {x: 41, y: 69.5}
+        - {x: 40, y: 63.5}
+        - {x: -21, y: 69.5}
+        - {x: -67, y: 69.5}
+        - {x: -67, y: -69.5}
+        - {x: -63, y: -69.5}
+        - {x: -43, y: -49.5}
+        - {x: -24, y: -28.5}
+        - {x: -23, y: -23.5}
+        - {x: -25, y: -31.5}
+        - {x: -27, y: -36.5}
+        - {x: -37, y: -69.5}
+        - {x: 63, y: -69.5}
+        - {x: 63, y: -28.5}
+        - {x: 47, y: 4.5}
+        - {x: 46, y: 6.5}
+        - {x: 60, y: 26.5}
+      - - {x: 64, y: -51.5}
+        - {x: 66, y: -53.5}
+        - {x: 67, y: -53.5}
+        - {x: 67, y: -48.5}
+        - {x: 65, y: -48.5}
+    - name: Witch_6
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 31
+        width: 59
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 60}
+        - {x: -29.5, y: 60}
+        - {x: -29.5, y: -47}
+        - {x: -25.5, y: -60}
+        - {x: 29.5, y: -60}
+        - {x: 29.5, y: -20}
+        - {x: 19.5, y: 22}
+      - - {x: -23.5, y: -7}
+        - {x: -20.5, y: -6}
+        - {x: -20.5, y: -3}
+        - {x: -23.5, y: -2}
+        - {x: -25.5, y: -4}
+      - - {x: 21.5, y: 12}
+        - {x: 20.5, y: 10}
+        - {x: 20.5, y: 8}
+        - {x: 24.5, y: 5}
+        - {x: 26.5, y: 5}
+        - {x: 28.5, y: 6}
+        - {x: 28.5, y: 12}
+    - name: Witch_7
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 31
+        width: 71
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20.5, y: 60}
+        - {x: -35.5, y: 60}
+        - {x: -35.5, y: -60}
+        - {x: 35.5, y: -60}
+        - {x: 35.5, y: -26}
+        - {x: 13.5, y: 25}
+      - - {x: -27.5, y: -3}
+        - {x: -24.5, y: -2}
+        - {x: -24.5, y: 1}
+        - {x: -27.5, y: 2}
+        - {x: -29.5, y: 0}
+      - - {x: 19.5, y: 16}
+        - {x: 18.5, y: 14}
+        - {x: 18.5, y: 12}
+        - {x: 23.5, y: 9}
+        - {x: 27.5, y: 9}
+        - {x: 27.5, y: 16}
+    - name: Witch_8
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 31
+        width: 60
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 60}
+        - {x: -12, y: 31}
+        - {x: -30, y: -27}
+        - {x: -30, y: -57}
+        - {x: -24, y: -60}
+        - {x: 30, y: -60}
+        - {x: 30, y: 60}
+      - - {x: 26, y: -35}
+        - {x: 25, y: -39}
+        - {x: 27, y: -41}
+        - {x: 30, y: -41}
+        - {x: 30, y: -32}
+        - {x: 29, y: -32}
+      - - {x: 23, y: -7}
+        - {x: 26, y: -6}
+        - {x: 26, y: -3}
+        - {x: 23, y: -2}
+        - {x: 21, y: -4}
+      - - {x: -28, y: 10}
+        - {x: -28, y: 7}
+        - {x: -26, y: 5}
+        - {x: -24, y: 5}
+        - {x: -20, y: 9}
+        - {x: -21, y: 12}
+        - {x: -26, y: 12}
+    - name: Witch_9
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 31
+        width: 70
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 60}
+        - {x: -35, y: 14}
+        - {x: -35, y: -60}
+        - {x: 29, y: -60}
+        - {x: 35, y: -54}
+        - {x: 35, y: 60}
+      - - {x: 26, y: -3}
+        - {x: 29, y: -2}
+        - {x: 29, y: 1}
+        - {x: 26, y: 2}
+        - {x: 24, y: 0}
+      - - {x: -28, y: 15}
+        - {x: -28, y: 11}
+        - {x: -27, y: 9}
+        - {x: -24, y: 9}
+        - {x: -19, y: 13}
+        - {x: -20, y: 16}
+        - {x: -26, y: 16}
+      - - {x: -35, y: 60}
+        - {x: -35, y: 42}
+        - {x: -34, y: 42}
+        - {x: -30, y: 43}
+        - {x: -30, y: 60}
+    - name: Witch_10
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 0
+        width: 125
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -54.5, y: -38.5}
+        - {x: -45.5, y: -67.5}
+        - {x: -31.5, y: -79.5}
+        - {x: -11.5, y: -79.5}
+        - {x: -11.5, y: -64.5}
+        - {x: -20.5, y: -47.5}
+        - {x: -41.5, y: -20.5}
+        - {x: -51.5, y: -20.5}
+        - {x: -54.5, y: -21.5}
+      - - {x: 56.5, y: -25.5}
+        - {x: 48.5, y: -25.5}
+        - {x: 13.5, y: -49.5}
+        - {x: 2.5, y: -58.5}
+        - {x: 2.5, y: -68.5}
+        - {x: 3.5, y: -70.5}
+        - {x: 20.5, y: -70.5}
+        - {x: 42.5, y: -66.5}
+        - {x: 54.5, y: -48.5}
+        - {x: 56.5, y: -37.5}
+      - - {x: -62.5, y: 79.5}
+        - {x: -62.5, y: 38.5}
+        - {x: -28.5, y: -48.5}
+        - {x: -27.5, y: -50.5}
+        - {x: 42.5, y: -50.5}
+        - {x: 62.5, y: -38.5}
+        - {x: 62.5, y: 79.5}
+      - - {x: 33.5, y: -7.5}
+        - {x: 33.5, y: -8.5}
+        - {x: 36.5, y: -11.5}
+        - {x: 39.5, y: -10.5}
+        - {x: 39.5, y: -7.5}
+        - {x: 37.5, y: -5.5}
+        - {x: 35.5, y: -5.5}
+    - name: Witch_13
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 30
+        width: 126
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 29, y: -64}
+        - {x: 46, y: -44}
+        - {x: 62, y: 17}
+        - {x: 53, y: 33}
+        - {x: 49, y: 33}
+        - {x: 63, y: 42}
+        - {x: 63, y: 64}
+        - {x: -63, y: 64}
+        - {x: -63, y: -32}
+        - {x: -53, y: -64}
+        - {x: -31, y: -64}
+        - {x: -20, y: -53}
+        - {x: -20, y: -64}
+      - - {x: 33, y: -22}
+        - {x: 33, y: -23}
+        - {x: 36, y: -26}
+        - {x: 39, y: -25}
+        - {x: 39, y: -22}
+        - {x: 37, y: -20}
+        - {x: 35, y: -20}
+    - name: Witch_14
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 32
+        width: 126
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 44}
+        - {x: 45, y: 49}
+        - {x: 40, y: 67}
+        - {x: 36, y: 71}
+        - {x: 23, y: 78}
+        - {x: 9, y: 78}
+        - {x: 3, y: 68}
+        - {x: -23, y: 74}
+        - {x: -50, y: 72}
+        - {x: -63, y: 53}
+        - {x: -63, y: 29}
+        - {x: -61, y: 26}
+        - {x: -62, y: 11}
+        - {x: -21, y: -78}
+        - {x: 30, y: -78}
+        - {x: 63, y: -15}
+        - {x: 63, y: 52}
+        - {x: 48, y: 51}
+      - - {x: 58, y: -60}
+        - {x: 61, y: -59}
+        - {x: 61, y: -56}
+        - {x: 58, y: -55}
+        - {x: 56, y: -57}
+      - - {x: 54, y: -57}
+        - {x: 57, y: -56}
+        - {x: 57, y: -53}
+        - {x: 54, y: -52}
+        - {x: 52, y: -54}
+      - - {x: -50, y: -55}
+        - {x: -47, y: -54}
+        - {x: -47, y: -51}
+        - {x: -50, y: -50}
+        - {x: -52, y: -52}
+      - - {x: -39, y: -38}
+        - {x: -39, y: -40}
+        - {x: -37, y: -42}
+        - {x: -36, y: -42}
+        - {x: -33, y: -39}
+        - {x: -34, y: -36}
+        - {x: -37, y: -36}
+      - - {x: 44, y: -16}
+        - {x: 47, y: -15}
+        - {x: 47, y: -12}
+        - {x: 44, y: -11}
+        - {x: 42, y: -13}
+    - name: Witch_15
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 32
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 63}
+        - {x: -63, y: -21}
+        - {x: -29, y: -63}
+        - {x: 28, y: -63}
+        - {x: 63, y: -3}
+        - {x: 63, y: 63}
+      - - {x: 58, y: -45}
+        - {x: 61, y: -44}
+        - {x: 61, y: -41}
+        - {x: 58, y: -40}
+        - {x: 56, y: -42}
+      - - {x: 54, y: -42}
+        - {x: 57, y: -41}
+        - {x: 57, y: -38}
+        - {x: 54, y: -37}
+        - {x: 52, y: -39}
+      - - {x: -50, y: -40}
+        - {x: -47, y: -39}
+        - {x: -47, y: -36}
+        - {x: -50, y: -35}
+        - {x: -52, y: -37}
+      - - {x: -39, y: -23}
+        - {x: -39, y: -25}
+        - {x: -37, y: -27}
+        - {x: -36, y: -27}
+        - {x: -33, y: -24}
+        - {x: -34, y: -21}
+        - {x: -37, y: -21}
+      - - {x: 44, y: -1}
+        - {x: 47, y: 0}
+        - {x: 47, y: 3}
+        - {x: 44, y: 4}
+        - {x: 42, y: 2}
+    - name: Witch_16
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 30
+        width: 79
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: -8.5}
+        - {x: -39.5, y: -35.5}
+        - {x: -15.5, y: -61.5}
+        - {x: 39.5, y: -61.5}
+        - {x: 39.5, y: 61.5}
+        - {x: 15.5, y: 61.5}
+        - {x: -19.5, y: 42.5}
+      - - {x: 29.5, y: -5.5}
+        - {x: 32.5, y: -4.5}
+        - {x: 32.5, y: -1.5}
+        - {x: 29.5, y: -0.5}
+        - {x: 27.5, y: -2.5}
+      - - {x: -28.5, y: 7.5}
+        - {x: -30.5, y: 4.5}
+        - {x: -30.5, y: 1.5}
+        - {x: -27.5, y: -0.5}
+        - {x: -26.5, y: -0.5}
+        - {x: -20.5, y: 4.5}
+        - {x: -21.5, y: 7.5}
+    - name: Witch_17
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 30
+        width: 109
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: 14.5}
+        - {x: -54.5, y: -7.5}
+        - {x: -54.5, y: -43.5}
+        - {x: -14.5, y: -61.5}
+        - {x: 54.5, y: -61.5}
+        - {x: 54.5, y: 61.5}
+        - {x: 28.5, y: 61.5}
+        - {x: -6.5, y: 44.5}
+      - - {x: 44.5, y: -5.5}
+        - {x: 47.5, y: -4.5}
+        - {x: 47.5, y: -1.5}
+        - {x: 44.5, y: -0.5}
+        - {x: 42.5, y: -2.5}
+      - - {x: -15.5, y: 5.5}
+        - {x: -15.5, y: 3.5}
+        - {x: -13.5, y: -0.5}
+        - {x: -11.5, y: -0.5}
+        - {x: -5.5, y: 4.5}
+        - {x: -6.5, y: 7.5}
+        - {x: -12.5, y: 7.5}
+    - name: Witch_18
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 30
+        width: 88
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -22.5}
+        - {x: 44, y: -15.5}
+        - {x: 27, y: -13.5}
+        - {x: 10, y: 42.5}
+        - {x: -23, y: 61.5}
+        - {x: -42, y: 61.5}
+        - {x: -44, y: 15.5}
+        - {x: -44, y: -58.5}
+        - {x: -40, y: -61.5}
+        - {x: -2, y: -61.5}
+        - {x: 3, y: -50.5}
+        - {x: 0, y: -38.5}
+        - {x: 24, y: -30.5}
+      - - {x: 31, y: -37.5}
+        - {x: 33, y: -39.5}
+        - {x: 36, y: -38.5}
+        - {x: 36, y: -34.5}
+        - {x: 34, y: -32.5}
+        - {x: 31, y: -33.5}
+      - - {x: -35, y: -5.5}
+        - {x: -32, y: -4.5}
+        - {x: -32, y: -1.5}
+        - {x: -35, y: -0.5}
+        - {x: -37, y: -2.5}
+      - - {x: 16, y: 5.5}
+        - {x: 16, y: 0.5}
+        - {x: 22, y: -0.5}
+        - {x: 26, y: -0.5}
+        - {x: 26, y: 4.5}
+        - {x: 23, y: 7.5}
+        - {x: 18, y: 7.5}
+    - name: Witch_19
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 30
+        width: 109
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3.5, y: -27.5}
+        - {x: -4.5, y: -27.5}
+        - {x: -8.5, y: -30.5}
+        - {x: -8.5, y: -31.5}
+        - {x: -5.5, y: -34.5}
+        - {x: 13.5, y: -45.5}
+        - {x: 41.5, y: -45.5}
+        - {x: 54.5, y: -33.5}
+        - {x: 54.5, y: -13.5}
+        - {x: 43.5, y: 22.5}
+        - {x: -20.5, y: 61.5}
+        - {x: -54.5, y: 61.5}
+        - {x: -54.5, y: -61.5}
+        - {x: -9.5, y: -61.5}
+        - {x: -3.5, y: -36.5}
+        - {x: -14.5, y: -29.5}
+        - {x: -4.5, y: -27.5}
+      - - {x: -44.5, y: -5.5}
+        - {x: -41.5, y: -4.5}
+        - {x: -41.5, y: -1.5}
+        - {x: -44.5, y: -0.5}
+        - {x: -46.5, y: -2.5}
+      - - {x: 6.5, y: 5.5}
+        - {x: 6.5, y: 0.5}
+        - {x: 12.5, y: -0.5}
+        - {x: 16.5, y: -0.5}
+        - {x: 16.5, y: 4.5}
+        - {x: 13.5, y: 7.5}
+        - {x: 8.5, y: 7.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

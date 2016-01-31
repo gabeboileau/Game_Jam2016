@@ -57,12 +57,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -72,7 +66,8 @@
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\Enemy_Spawner.cs" />
     <Compile Include="Assets\Script\Game_Controller.cs" />
-    <Compile Include="Assets\Script\IDamageable.cs" />
+    <Compile Include="Assets\Script\IEnemy.cs" />
+    <Compile Include="Assets\Script\IPlayer.cs" />
     <Compile Include="Assets\Script\Imp.cs" />
     <Compile Include="Assets\Script\Imp_SpawnController.cs" />
     <Compile Include="Assets\Script\Imp_Spawner.cs" />

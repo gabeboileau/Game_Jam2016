@@ -28,9 +28,21 @@ public class Game_Controller : MonoBehaviour
 		m_DemonSlider.value += aAmount;
 	}
 
+	public static void RemoveFromDemonBar(int aAmount)
+	{
+		m_DemonSlider.value -= aAmount;
+	}
+
+
 	void Update()
 	{
 		m_DemonSlider.value -= Time.deltaTime* speedOfDemonDepletion;
+
+		if (m_DemonSlider.value <= 0)
+		{
+			//Game Over
+			Debug.Log("Game Over");
+		}
 	}
 
 	IEnumerator cr_SwitchControllerSupport()

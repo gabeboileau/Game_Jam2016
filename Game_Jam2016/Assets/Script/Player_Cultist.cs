@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player_Cultist : MonoBehaviour, IDamageable
+public class Player_Cultist : MonoBehaviour
 {
 	public int immunityTime;
 	public int playerMovementSpeed;
@@ -17,10 +17,11 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 	private Imp currentImpInHand;
 
 	private Vector3 m_MoveDirection;
-
+	private Animator m_Animator;
 
 	void Awake()
 	{
+		m_Animator = GetComponent<Animator>();
 		m_MoveDirection = Vector3.zero;
 		m_CurrentHealth = MAX_HEALTH;
 	}
@@ -34,6 +35,16 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 	void Update()
 	{
+		if (m_HasImp)
+		{
+			playerMovementSpeed = 1;
+		}
+		else
+		{
+			playerMovementSpeed = 3;
+		}
+
+
 		UpdateInput();
 
 		m_MoveDirection = new Vector3(m_HorizontalInput, m_VerticalInput, 0);
@@ -42,6 +53,9 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 	void UpdateInput()
 	{
+		m_Animator.SetFloat("HorizontalInput", m_HorizontalInput);
+		m_Animator.SetFloat("VerticalInput", m_VerticalInput);
+
 		if (Game_Controller.controller1IsDemon)
 		{
 			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
@@ -49,9 +63,8 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 			if (Input.GetButtonDown("Joystick2FireImp"))
 			{
-				FireImp();
+				//FireImp();
 			}
-
 		}
 		else
 		{
@@ -60,7 +73,7 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 
 			if (Input.GetButtonDown("Joystick1FireImp"))
 			{
-				FireImp();
+				//FireImp();
 			}
 		}
 	}
@@ -73,8 +86,9 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 			if (aCollision.gameObject.GetComponent<Imp>() != null)
 			{
 				currentImpInHand = aCollision.gameObject.GetComponent<Imp>();
+				currentImpInHand.GetComponent<Imp>().enabled = false;
 				aCollision.transform.position = m_RightImpSpot.position;
-				aCollision.transform.parent = transform;
+				aCollision.transform.SetParent(transform);
 				m_HasImp = true;
 			}
 		}
@@ -105,11 +119,11 @@ public class Player_Cultist : MonoBehaviour, IDamageable
 				currentImpInHand.gameObject.AddComponent<Rigidbody2D>();
 			}
 
-			currentImpInHand.transform.parent = null;
+			currentImpInHand.transform.SetParent(null);
 			currentImpInHand.gameObject.GetComponent<Rigidbody2D>().AddForce(m_MoveDirection * 100);
-			//GameObject.Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
-
-			//currentImpInHand = null;
+			//Destroy(currentImpInHand.gameObject.GetComponent<Rigidbody2D>());
+			currentImpInHand.GetComponent<Imp>().enabled = true;
+			currentImpInHand = null;
 			m_HasImp = false;
 		}
 	}
