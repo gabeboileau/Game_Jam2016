@@ -12,11 +12,20 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 
 	private Vector3 m_MoveDirection;
 
+	public GameObject bottomCollider;
+	public GameObject topCollider;
+	public GameObject rightCollider;
+	public GameObject leftCollider;
+
+	public float attackCooldown;
+	private float cooldownTimer;
+	private bool canAttack = false;
 
 
 	void Start()
 	{
 		m_Animator = GetComponent<Animator>();
+		cooldownTimer = attackCooldown;
 	}
 
 	void Update()
@@ -34,6 +43,21 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 		{
 			m_Animator.SetBool("isMoving", false);
 		}
+
+		if (cooldownTimer > 0)
+		{
+			UpdateCooldownTimer();
+			canAttack = false;
+		}
+		else
+		{
+			canAttack = true;
+		}
+	}
+
+	void UpdateCooldownTimer()
+	{
+		cooldownTimer -= Time.deltaTime;
 	}
 
 
@@ -47,9 +71,10 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick2Horizontal");
 
-			if (Input.GetButton("Joystick2FireImp"))
+			if (Input.GetButtonDown("Joystick2FireImp") && canAttack)
 			{
 				Attack();
+				cooldownTimer = attackCooldown;
 			}
 		}
 		else
@@ -57,32 +82,42 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 			m_VerticalInput = Input.GetAxis("Joystick1Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick1Horizontal");
 
-			if (Input.GetButton("Joystick1FireImp"))
+			if (Input.GetButtonDown("Joystick1FireImp") && canAttack)
 			{
 				Attack();
+				cooldownTimer = attackCooldown;
 			}
 		}
 	}
+
 
 	void Attack()
 	{
 		if (m_MoveDirection.x > 0.5)
 		{
+			Debug.Log("Right");
 			m_Animator.SetTrigger("RightAttack");
+			rightCollider.SetActive(true);
 		}
 
 		else if (m_MoveDirection.x < -0.5)
 		{
+			Debug.Log("Left");
 			m_Animator.SetTrigger("LeftAttack");
+			leftCollider.SetActive(true);
 		}
 
 		else if (m_MoveDirection.y > 0.5)
 		{
+			Debug.Log("Up");
 			m_Animator.SetTrigger("UpAttack");
+			topCollider.SetActive(true);
 		}
 
 		else if (m_MoveDirection.y < -0.5)
 		{
+			Debug.Log("Down");
+			bottomCollider.SetActive(true);
 			m_Animator.SetTrigger("DownAttack");
 		}
 	}

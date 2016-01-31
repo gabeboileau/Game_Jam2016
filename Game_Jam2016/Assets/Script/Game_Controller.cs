@@ -8,20 +8,20 @@ public class Game_Controller : MonoBehaviour
 	public GameObject m_DemonBar;
 
 	public static bool controller1IsDemon;
-
+	public Text timerText;
+	public int startTime;
+	private float currentTime;
 
 	//private static int currentDemonSliderAmount;
 	private static Slider m_DemonSlider;
 
 	void Start()
 	{
-		controller1IsDemon = false;
+		controller1IsDemon = true;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
-
+		currentTime = startTime;
 		//StartCoroutine(cr_SwitchControllerSupport());
-
 	}
-
 
 	public static void AddToDemonBar(int aAmount)
 	{
@@ -36,6 +36,7 @@ public class Game_Controller : MonoBehaviour
 
 	void Update()
 	{
+		timerText.text = Mathf.Floor(currentTime).ToString();
 		m_DemonSlider.value -= Time.deltaTime* speedOfDemonDepletion;
 
 		if (m_DemonSlider.value <= 0)
@@ -43,6 +44,13 @@ public class Game_Controller : MonoBehaviour
 			//Game Over
 			Debug.Log("Game Over");
 		}
+
+		if (currentTime > 0)
+		{
+			currentTime -= Time.deltaTime;
+
+		}
+
 	}
 
 	IEnumerator cr_SwitchControllerSupport()

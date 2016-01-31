@@ -35,6 +35,11 @@ public class Enemy : MonoBehaviour, IEnemy
 		}
 
 
+		if (GetDistanceFromPlayer() <= 0.3f)
+		{
+			//Attack();
+		}
+
 		if (cooldownTimer > 0)
 		{
 			UpdateCooldownTimer();
@@ -61,28 +66,28 @@ public class Enemy : MonoBehaviour, IEnemy
 		return Vector3.Distance(transform.position, playerTrans.position);
 	}
 
-	//void Attack()
-	//{
-	//	if (m_MoveDirection.x > 0.5)
-	//	{
-	//		m_Animator.SetTrigger("RightAttack");
-	//	}
+	void Attack()
+	{
+		if (m_MoveDirection.x > 0.5)
+		{
+			m_Animator.SetTrigger("RightAttack");
+		}
 
-	//	else if (m_MoveDirection.x < -0.5)
-	//	{
-	//		m_Animator.SetTrigger("LeftAttack");
-	//	}
+		else if (m_MoveDirection.x < -0.5)
+		{
+			m_Animator.SetTrigger("LeftAttack");
+		}
 
-	//	else if (m_MoveDirection.y > 0.5)
-	//	{
-	//		m_Animator.SetTrigger("UpAttack");
-	//	}
+		else if (m_MoveDirection.y > 0.5)
+		{
+			m_Animator.SetTrigger("UpAttack");
+		}
 
-	//	else if (m_MoveDirection.y < -0.5)
-	//	{
-	//		m_Animator.SetTrigger("DownAttack");
-	//	}
-	//}
+		else if (m_MoveDirection.y < -0.5)
+		{
+			m_Animator.SetTrigger("DownAttack");
+		}
+	}
 
 
 	public void TakeDamage(int aAmount)

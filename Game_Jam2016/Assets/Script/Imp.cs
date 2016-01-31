@@ -24,7 +24,6 @@ public class Imp : MonoBehaviour
 
 	void Update()
 	{
-		Debug.Log(Vector3.Distance(transform.position, m_CurrentPatrol.transform.position));
 		if (Vector3.Distance(transform.position, m_CurrentPatrol.transform.position) > 0.5)
 		{
 			
