@@ -5,7 +5,7 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 {
 	public int playerMovementSpeed;
 
-
+    private AudioCompo m_Audio;
 	private float m_VerticalInput = 0;
 	private float m_HorizontalInput = 0;
 	private Animator m_Animator;
@@ -17,13 +17,17 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 	public GameObject rightCollider;
 	public GameObject leftCollider;
 
+    
+
 	public float attackCooldown;
 	private float cooldownTimer;
 	private bool canAttack = false;
+  
 
 
 	void Start()
 	{
+        m_Audio = GetComponent<AudioCompo>();
 		m_Animator = GetComponent<Animator>();
 		cooldownTimer = attackCooldown;
 	}
@@ -120,6 +124,7 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 			bottomCollider.SetActive(true);
 			m_Animator.SetTrigger("DownAttack");
 		}
+        m_Audio.Attack1Sound();
 	}
 
 	public void TakeDamage(int aAmount)
