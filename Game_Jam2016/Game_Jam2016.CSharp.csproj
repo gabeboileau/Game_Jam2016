@@ -65,6 +65,7 @@
     <Compile Include="Assets\Script\Demon_AttackCollider.cs" />
     <Compile Include="Assets\Script\Demon_Lady.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\Enemy_AttackCollider.cs" />
     <Compile Include="Assets\Script\Enemy_Spawner.cs" />
     <Compile Include="Assets\Script\Game_Controller.cs" />
     <Compile Include="Assets\Script\IEnemy.cs" />

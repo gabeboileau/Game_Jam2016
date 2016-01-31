@@ -26,7 +26,6 @@ public class Imp_SpawnController : MonoBehaviour
 		}
 	}
 
-
 	void SpawnImp()
 	{
 		int randomIndex = UnityEngine.Random.Range(0, listOfImpSpawners.Count);

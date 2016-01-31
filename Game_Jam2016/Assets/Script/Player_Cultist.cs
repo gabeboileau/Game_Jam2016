@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player_Cultist : MonoBehaviour
+public class Player_Cultist : MonoBehaviour, IPlayer
 {
 	public int immunityTime;
 	public int playerMovementSpeed;
 	public Transform m_RightImpSpot;
 
-	private const int MAX_HEALTH = 100;
+	private const int MAX_HEALTH = 30;
 	private int m_CurrentHealth;
 
 	private float m_VerticalInput = 0;
@@ -21,6 +21,7 @@ public class Player_Cultist : MonoBehaviour
 
 	void Awake()
 	{
+		
 		m_Animator = GetComponent<Animator>();
 		m_MoveDirection = Vector3.zero;
 		m_CurrentHealth = MAX_HEALTH;
@@ -35,6 +36,12 @@ public class Player_Cultist : MonoBehaviour
 
 	void Update()
 	{
+		if (m_CurrentHealth <= 0)
+		{
+			Time.timeScale = 0;
+		}
+
+		Debug.Log(m_CurrentHealth);
 		if (m_HasImp)
 		{
 			playerMovementSpeed = 1;

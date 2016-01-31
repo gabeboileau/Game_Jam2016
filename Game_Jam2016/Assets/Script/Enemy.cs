@@ -15,6 +15,11 @@ public class Enemy : MonoBehaviour, IEnemy
 	private float cooldownTimer;
 	private bool canAttack = false;
 
+	public GameObject bottomCollider;
+	public GameObject topCollider;
+	public GameObject rightCollider;
+	public GameObject leftCollider;
+
 	void Start()
 	{
 		m_Animator = GetComponent<Animator>();
@@ -24,6 +29,7 @@ public class Enemy : MonoBehaviour, IEnemy
 
 	void Update()
 	{
+
 		m_Animator.SetFloat("Horizontal", GetDirectionToPlayer().x);
 		m_Animator.SetFloat("Vertical", GetDirectionToPlayer().y);
 
@@ -35,9 +41,9 @@ public class Enemy : MonoBehaviour, IEnemy
 		}
 
 
-		if (GetDistanceFromPlayer() <= 0.3f)
+		if (GetDistanceFromPlayer() <= 5.0f && canAttack)
 		{
-			//Attack();
+			Attack();
 		}
 
 		if (cooldownTimer > 0)
@@ -58,37 +64,59 @@ public class Enemy : MonoBehaviour, IEnemy
 
 	Vector3 GetDirectionToPlayer()
 	{
-		return (playerTrans.position - transform.position).normalized;
+		if (playerTrans != null)
+		{
+			return (playerTrans.position - transform.position).normalized;
+		}
+		else
+		{
+			return Vector3.zero;
+		}
 	}
 
 	float GetDistanceFromPlayer()
 	{
-		return Vector3.Distance(transform.position, playerTrans.position);
+		if (playerTrans != null)
+		{
+			return Vector3.Distance(transform.position, playerTrans.position);
+
+		}
+		else
+		{
+			return 0;
+		}
 	}
+
 
 	void Attack()
 	{
-		if (m_MoveDirection.x > 0.5)
+		if (GetDirectionToPlayer().x > 0.5)
 		{
-			m_Animator.SetTrigger("RightAttack");
+			m_Animator.SetTrigger("AttackRight");
+			rightCollider.SetActive(true);
 		}
 
-		else if (m_MoveDirection.x < -0.5)
+		else if (GetDirectionToPlayer().x < -0.5)
 		{
-			m_Animator.SetTrigger("LeftAttack");
+			m_Animator.SetTrigger("AttackLeft");
+			leftCollider.SetActive(true);
 		}
 
-		else if (m_MoveDirection.y > 0.5)
+		else if (GetDirectionToPlayer().y > 0.5)
 		{
-			m_Animator.SetTrigger("UpAttack");
+			m_Animator.SetTrigger("AttackUp");
+			topCollider.SetActive(true);
 		}
 
-		else if (m_MoveDirection.y < -0.5)
+		else if (GetDirectionToPlayer().y < -0.5)
 		{
-			m_Animator.SetTrigger("DownAttack");
+			bottomCollider.SetActive(true);
+			m_Animator.SetTrigger("AttackDown");
 		}
+
+		cooldownTimer = attackCooldown;
+		canAttack = false;
 	}
-
 
 	public void TakeDamage(int aAmount)
 	{
