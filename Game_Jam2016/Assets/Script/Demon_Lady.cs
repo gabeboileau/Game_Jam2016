@@ -75,6 +75,7 @@ public class Demon_Lady : MonoBehaviour, IPlayer
 			m_VerticalInput = Input.GetAxis("Joystick2Vertical");
 			m_HorizontalInput = Input.GetAxis("Joystick2Horizontal");
 
+
 			if (Input.GetButtonDown("Joystick2FireImp") && canAttack)
 			{
 				Attack();

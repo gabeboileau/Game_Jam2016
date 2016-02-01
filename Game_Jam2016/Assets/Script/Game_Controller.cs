@@ -17,11 +17,27 @@ public class Game_Controller : MonoBehaviour
 
 	void Start()
 	{
+   
+
 		m_GameOverImage = transform.Find("GameOver").gameObject;
 		controller1IsDemon = false;
 		m_DemonSlider = m_DemonBar.GetComponent<Slider>();
 		currentTime = 0;
 		//StartCoroutine(cr_SwitchControllerSupport());
+        if (Input.GetJoystickNames().Length == 3)
+        {
+            GameObject.Find("Cultist 3").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("Cultist 3").GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else if (Input.GetJoystickNames().Length == 4)
+        {
+            GameObject.Find("Cultist 3").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("Cultist 4").GetComponent<SpriteRenderer>().enabled = true;
+
+            GameObject.Find("Cultist 3").GetComponent<BoxCollider2D>().enabled = true;
+            GameObject.Find("Cultist 4").GetComponent<BoxCollider2D>().enabled = true;
+
+        }
 	}
 
 	public static void AddToDemonBar(int aAmount)

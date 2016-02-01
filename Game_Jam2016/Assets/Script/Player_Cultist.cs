@@ -42,7 +42,7 @@ public class Player_Cultist : MonoBehaviour, IPlayer
 			Time.timeScale = 0;
 		}
 
-		Debug.Log(m_CurrentHealth);
+//		Debug.Log(m_CurrentHealth);
 		if (m_HasImp)
 		{
 			playerMovementSpeed = 1;
